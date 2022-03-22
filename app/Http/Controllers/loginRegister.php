@@ -45,7 +45,7 @@ class loginRegister extends Controller {
             $insert->email = $req->input("email");
             $insert->image = $imageNameToStore;
             //save in local storage
-            $req->file("image")->storeAs("public/here", $imageNameToStore);
+            $req->file("image")->move("img/", $imageNameToStore);
             $insert->password = md5($req->input("password"));
             $insert->save();
 

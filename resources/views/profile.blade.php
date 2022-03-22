@@ -32,7 +32,7 @@
         @enderror
 
         <label for="">Image:</label>
-        <img src="{{ asset('storage/here/'.$getById->image) }}" width="20%" class="m-3" alt="">
+        <img src="{{ asset('img/'.$getById->image) }}" width="20%" class="m-3" alt="">
         <input type="file" name="image">
         @error("image")
             <div class="badge-danger badge-pill d-inline-block">{{ $message }}</div>
